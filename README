@@ -1,0 +1,25 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=3151
+
+This a really simple script to made your life easier if you write unit test in python (you should !).
+
+This script assume that your test file is name test_<other file name>.
+Btw, this shouldn't be hard to change
+
+Here are the basic commands:
+,tc create the test file - stand for "test create"
+,tF force to create a test file (this will be necessary if another file already have the matching name, this file will be destroyed) - "test Force (create)"
+,tr run the unittest for this file - stand for "test run"
+,s  swap between test file and actual file, if the test file doesn't exist, it will be created - stand for "swap"
+
+You'll be mostly (exclusivly ?) using only ,s and ,tr
+
+Other feature:
+ - will display a big red stupid message in your statusline if this python file don't have a test file, remove the set statusline+=blabla if you don't want to have it.
+
+If you have comments/bugs repport/feature request/chocolate feel free to send me an email or ping me on irc (psycojoker@irc.freenode.net#vim)
+
+*Not* include in the script, I love those mappings:
+imap ,ar self.assertRaises()<left>
+imap ,ae self.assertEqual()<left>
+imap ,at self.assertTrue()<left>
+imap ,af self.assertFalse()<left>
